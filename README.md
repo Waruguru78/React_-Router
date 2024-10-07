@@ -9,3 +9,5 @@ Every movie should have the following attributes: title, description, posterURL,
 The user should be:
     Able to add a new movie.
     Filter the movies with title/rating.
+
+link to the App; https://movie-app-alpha-beige.vercel.app/
