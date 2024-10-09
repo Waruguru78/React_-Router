@@ -5,15 +5,17 @@ const AddMovie = ({ addMovie }) => {
   const [description, setDescription] = useState("");
   const [posterURL, setPosterURL] = useState("");
   const [rating, setRating] = useState("");
+  const [trailer, setTrailer] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newMovie = { title, description, posterURL, rating: Number(rating) };
+    const newMovie = { title, description, posterURL, rating: Number(rating), trailer };
     addMovie(newMovie);
     setTitle("");
     setDescription("");
     setPosterURL("");
     setRating("");
+    setTrailer(""); 
   };
 
   return (
@@ -47,6 +49,13 @@ const AddMovie = ({ addMovie }) => {
         required
         min="0"
         max="10"
+      />
+      <input
+        type="url"
+        placeholder="Trailer URL" 
+        value={trailer}
+        onChange={(e) => setTrailer(e.target.value)}
+        required
       />
       <button type="submit">Add Movie</button>
     </form>

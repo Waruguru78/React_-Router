@@ -11,6 +11,8 @@ const Filter = ({ setSearchTitle, setSearchRating }) => {
       <input
         type="number"
         placeholder="Minimum rating"
+        min="0"     // Ensures the minimum rating is 0
+        max="10"    // Ensures the maximum rating is 10
         onChange={(e) => setSearchRating(e.target.value)}
       />
     </div>
